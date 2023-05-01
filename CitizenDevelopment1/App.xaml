@@ -1,0 +1,28 @@
+﻿<Application x:Class="CitizenDevelopment1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CitizenDevelopment1"
+             xmlns:viewmodels="clr-namespace:CitizenDevelopment1.ViewModels"
+             xmlns:views="clr-namespace:CitizenDevelopment1.Views"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewmodels:InsertViewModel}">
+                <views:InsertView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:UpdateViewModel}">
+                <views:UpdateView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:DeleteViewModel}">
+                <views:DeleteView/>
+            </DataTemplate>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

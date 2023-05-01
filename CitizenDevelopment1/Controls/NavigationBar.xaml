@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="CitizenDevelopment1.Controls.NavigationBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CitizenDevelopment1.Controls"
+             xmlns:nav="clr-namespace:CitizenDevelopment1.State.Navigators"
+             xmlns:converters="clr-namespace:CitizenDevelopment1.Converters"
+             xmlns:vm="clr-namespace:CitizenDevelopment1.ViewModels" d:DataContext="{d:DesignInstance Type=nav:Navigator}"
+             xmlns:commands="clr-namespace:CitizenDevelopment1.Commands"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <converters:EqualValueToParameterConverter x:Key="EqualValueToParameterConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="{StaticResource BrushPrimary1}">
+            <TextBlock Padding="10"
+                MaxWidth="1000"
+                FontSize="28"
+                Foreground="{StaticResource BrushPrimary4}"
+                Text="Citizen Development" />
+        </Grid>
+
+        <Grid Grid.Row="1"
+            Background="{StaticResource BrushPrimary2}"
+            RenderOptions.EdgeMode="Aliased">
+            <Grid MaxWidth="1000">
+                <Grid.Resources>
+                    <Style BasedOn="{StaticResource NavButton}" TargetType="RadioButton" />
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <RadioButton Grid.Column="0"
+                    Command="{Binding UpdateCurrentViewModelCommand}"
+                    CommandParameter="{x:Static nav:ViewType.Insert}"
+                    Content="Insert"
+                    IsChecked="{x:Null}" />
+                <RadioButton Grid.Column="1"
+                    Command="{Binding UpdateCurrentViewModelCommand}"
+                    CommandParameter="{x:Static nav:ViewType.Update}"
+                    Content="Update"
+                    IsChecked="{x:Null}" />
+                <RadioButton Grid.Column="2"
+                    Command="{Binding UpdateCurrentViewModelCommand}"
+                    CommandParameter="{x:Static nav:ViewType.Delete}"
+                    Content="Delete"
+                    IsChecked="{x:Null}" />
+                
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
