@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\vadim\source\repos\CitizenDevelopment1\CitizenDevelopment1\App.xaml
-62114736456
+7-200133365
 1-1184298625
-221373204206
+25-2078053108
 482052024491
-Controls\NavigationBar.xaml;MainWindow.xaml;Styles\Common.xaml;Views\DeleteView.xaml;Views\InsertView.xaml;Views\UpdateView.xaml;
+Controls\NavigationBar.xaml;MainWindow.xaml;Styles\Common.xaml;Views\DatabaseView.xaml;Views\DeleteView.xaml;Views\InsertView.xaml;Views\UpdateView.xaml;
 
 True
 

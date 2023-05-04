@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="CitizenDevelopment1.Views.DatabaseView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CitizenDevelopment1.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="20" MaxWidth="1000">
+        <Border MinWidth="700" Margin="15,15,15,0" Background="{DynamicResource BrushPrimary4}" VerticalAlignment="Top" Padding="40" MaxWidth="1000" CornerRadius="5" MinHeight="130" Height="177">
+            <ListBox x:Name="DatabaseListBox" Height="auto" MaxHeight="900"  MinHeight="20" Margin="-15,22,-15,-30">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="4"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </Border>
+        <StackPanel>
+
+            <TextBlock Text="Database" FontSize="20" FontWeight="Bold" Margin="40,30,253,0"/>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="125*"/>
+                    <ColumnDefinition Width="169*"/>
+                    <ColumnDefinition Width="86*"/>
+                    <ColumnDefinition Width="190*"/>
+                    <ColumnDefinition Width="190*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </StackPanel>
+        <Grid>
+            <Button Content="Refresh" MaxWidth="400" FontSize="20" FontWeight="Bold" Background="{StaticResource BrushPrimary7}" Margin="432,35,40,230" Click="Button_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Style.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" To="{StaticResource ColorPrimary4}"/>
+                                            <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" To="{StaticResource ColorPrimary7}"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                            </Trigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            
+        </Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" MinHeight="290"/>
+
+            <RowDefinition Height="auto" MinHeight="8"/>
+        </Grid.RowDefinitions>
+
+    </Grid>
+</UserControl>
+

@@ -22,7 +22,11 @@
             <DataTemplate DataType="{x:Type viewmodels:DeleteViewModel}">
                 <views:DeleteView/>
             </DataTemplate>
-            
+
+            <DataTemplate DataType="{x:Type viewmodels:DatabaseViewModel}">
+                <views:DatabaseView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

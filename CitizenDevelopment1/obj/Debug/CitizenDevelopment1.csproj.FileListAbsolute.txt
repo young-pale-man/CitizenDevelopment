@@ -83,3 +83,5 @@ C:\Users\vadim\source\repos\CitizenDevelopment1\CitizenDevelopment1\bin\Debug\da
 C:\Users\vadim\source\repos\CitizenDevelopment1\CitizenDevelopment1\obj\Debug\CitizenDevelopment1_Content.g.cs
 C:\Users\vadim\source\repos\CitizenDevelopment1\CitizenDevelopment1\bin\Debug\Dapper.dll
 C:\Users\vadim\source\repos\CitizenDevelopment1\CitizenDevelopment1\bin\Debug\Dapper.xml
+C:\Users\vadim\source\repos\CitizenDevelopment1\CitizenDevelopment1\obj\Debug\Views\DatabaseView.g.cs
+C:\Users\vadim\source\repos\CitizenDevelopment1\CitizenDevelopment1\obj\Debug\Views\DatabaseView.baml

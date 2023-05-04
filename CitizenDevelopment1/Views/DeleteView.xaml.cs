@@ -34,11 +34,15 @@ namespace CitizenDevelopment1.Views
 
             if (!isIdCorrect)
             { MessageBox.Show("Invalid Id!"); }
-            
             else
             {
-                AccessToDatabase.DeleteUser(idConverted);
-                MessageBox.Show("Success!");
+                bool isSuccess = AccessToDatabase.DeleteUser(idConverted);
+
+                if (isSuccess)
+                    MessageBox.Show("Success!");
+                else
+                    MessageBox.Show("Record with this Id is not exists!");
+
                 TextBoxId.Text = "";
             }
         }

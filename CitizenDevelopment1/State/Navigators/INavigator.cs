@@ -12,7 +12,8 @@ namespace CitizenDevelopment1.State.Navigators
     { 
         Insert,
         Update,
-        Delete
+        Delete,
+        Database
     }
 
     public interface INavigator

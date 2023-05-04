@@ -41,6 +41,9 @@ namespace CitizenDevelopment1.Commands
                     case ViewType.Delete:
                         _navigator.CurrentViewModel = new DeleteViewModel();
                         break;
+                    case ViewType.Database:
+                        _navigator.CurrentViewModel = new DatabaseViewModel();
+                        break;
                     default:
                         break;
                 }

@@ -32,7 +32,6 @@ namespace CitizenDevelopment1.Views
             int idConverted;
             bool isIdCorrect = int.TryParse(id, out idConverted);
             
-
             if (!isIdCorrect)
             { MessageBox.Show("Invalid Id!"); }
             else if (applicationName.Length < 1)
@@ -51,8 +50,12 @@ namespace CitizenDevelopment1.Views
             {
                 User user = new User(applicationName, userName, comment);
 
-                AccessToDatabase.UpdateUser(idConverted, user);
+                bool isSuccess = AccessToDatabase.UpdateUser(idConverted, user);
+
+                if(isSuccess)
                 MessageBox.Show("Success!");
+                else
+                MessageBox.Show("Record with this Id is not exists!");
 
                 TextBoxId.Text = "";
                 TextBoxApplicationName.Text = "";

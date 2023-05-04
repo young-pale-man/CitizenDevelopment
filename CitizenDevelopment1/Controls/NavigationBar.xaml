@@ -57,6 +57,11 @@
                     CommandParameter="{x:Static nav:ViewType.Delete}"
                     Content="Delete"
                     IsChecked="{x:Null}" />
+                <RadioButton Grid.Column="3"
+                    Command="{Binding UpdateCurrentViewModelCommand}"
+                    CommandParameter="{x:Static nav:ViewType.Database}"
+                    Content="Database"
+                    IsChecked="{x:Null}" />
                 
             </Grid>
         </Grid>

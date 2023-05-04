@@ -156,15 +156,20 @@
     </Compile>
     <Compile Include="Converters\EqualValueToParameterConverter.cs" />
     <Compile Include="Database\AccessToDatabase.cs" />
+    <Compile Include="Database\UsersOutput.cs" />
     <Compile Include="Models\ObservableObject.cs" />
     <Compile Include="State\Navigators\INavigator.cs" />
     <Compile Include="State\Navigators\Navigator.cs" />
     <Compile Include="Database\User.cs" />
+    <Compile Include="ViewModels\DatabaseViewModel.cs" />
     <Compile Include="ViewModels\DeleteViewModel.cs" />
     <Compile Include="ViewModels\InsertViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\UpdateViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\DatabaseView.xaml.cs">
+      <DependentUpon>DatabaseView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DeleteView.xaml.cs">
       <DependentUpon>DeleteView.xaml</DependentUpon>
     </Compile>
@@ -191,6 +196,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Styles\Common.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DatabaseView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
