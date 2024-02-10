@@ -8,19 +8,19 @@ Created to work with a local database, it includes basic functionality (adding/d
 
 The application presents a window with a bar on top. The bar has four tabs:
 
-####- Insert
+#### Insert
 Allows you to add a new entry to the database. 
 Includes three text fields(Application Name, User Name, Comment) and also "Insert" button.
 
-####- Update
+#### Update
 Allows you to update a record into database. 
 Includes four text fields(Id, New Application Name, New User Name, New Comment) and also "Update" button.
 
-####- Delete
+#### Delete
 Allows you to delete a record from database. 
 Includes one text field(Id) and "Delete" button.
 
-####- Database
+#### Database
 Allows you to view database. Includes a window with a list and "Refresh" button. 
 List of records shows after pressing a button.
 
