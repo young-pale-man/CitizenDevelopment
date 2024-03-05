@@ -3,6 +3,13 @@
 An application written according to technical specifications during the recruitment process. 
 Created to work with a local database, it includes basic functionality (adding/deleting/editing).
 
+## Technologies🔧
+
+#### - MVVM Core
+#### - .Net
+#### - WPF
+#### - GUI
+#### - SQLite
 
 ## Interface💻
 
